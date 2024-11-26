@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import { Register } from "../pages/register/Register";
 import ParentPage from "../pages/parent/ParentPage";
-import { EditBabysitter } from "../components/EditBabysitter";
 import ErrorPage from "../pages/error/ErrorPage";
 import AboutPage from "../pages/about/AboutPage";
 import { LoginPage } from "../pages/login/LoginPage";
 import HomePage from "../pages/home/HomePage";
 import DisplayBabisitterPage from "../pages/display/DisplayBabisitterPage";
 import BaybisitterHomePage from "../pages/babySitter/BabysitterHomePage";
+import { EditBabysitter } from "../components/edit/EditBabysitter";
 
 export default function AppRouter() {
   return (

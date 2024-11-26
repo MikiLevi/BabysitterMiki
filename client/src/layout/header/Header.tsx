@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import logo from "../../assets/logo.png";
 import Cookies from "js-cookie";
-import TopNavLink from "../../components/TopNavLink";
-import "./Header.module.css"
+import TopNavLink from "../../components/topNav/TopNavLink";
+import style from "./Header.module.css";
 
 export default function Header() {
   const { user, logout } = useContext(AuthContext) ?? {};
@@ -31,7 +31,7 @@ export default function Header() {
 
         <div className="logo-container">
           <Link to="/">
-            <img src={logo} alt="BabyHub Logo" className="logo" />
+            <img src={logo} alt="BabyHub Logo" className={style.logo} />
           </Link>
         </div>
 

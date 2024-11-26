@@ -1,5 +1,5 @@
 import React from "react";
-import CommentRejister from "../../components/CommentRegister";
+import CommentRejister from "../../components/comment/CommentRegister";
 import "./Main.module.css";
 interface Props {
   children: React.ReactNode;

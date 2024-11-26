@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
-import useFetch from "../hooks/useFetch";
-import IBabysitter from "../interface/BabySitter";
-import { AuthContext } from "../providers/AuthProvider";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import PageHeader from "./PageHeader";
-import TopNavLink from "./TopNavLink";
+import useFetch from "../../hooks/useFetch";
+import IBabysitter from "../../interface/BabySitter";
+import { AuthContext } from "../../providers/AuthProvider";
+import { useNavigate, useParams } from "react-router-dom";
+import PageHeader from "../page/PageHeader";
+import TopNavLink from "../topNav/TopNavLink";
 
 export const EditBabysitter = () => {
   const { user } = useContext(AuthContext) ?? {};

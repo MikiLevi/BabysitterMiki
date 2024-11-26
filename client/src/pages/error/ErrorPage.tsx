@@ -1,4 +1,4 @@
-import PageHeader from "../../components/PageHeader";
+import PageHeader from "../../components/page/PageHeader";
 
 export default function ErrorPage() {
   return (

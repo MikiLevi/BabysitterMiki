@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-import useFetch from "../hooks/useFetch";
-import { AuthContext } from "../providers/AuthProvider";
+import useFetch from "../../hooks/useFetch";
+import { AuthContext } from "../../providers/AuthProvider";
 interface Props {
   id: string;
 }
@@ -78,7 +78,7 @@ export default function CommentRegister({ id }: Props) {
         <div onClick={() => handelStyle(5)} className={star5}></div>
       </div>
 
-      <button type="button"  onClick={() => handleSubmit() }>
+      <button type="button" onClick={() => handleSubmit()}>
         Submit💌
       </button>
     </div>
