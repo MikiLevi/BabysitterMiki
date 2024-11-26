@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../providers/AuthProvider";
-import useFetch from "../hooks/useFetch";
-import IBabysitter from "../interface/BabySitter";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import useFetch from "../../hooks/useFetch";
+import IBabysitter from "../../interface/BabySitter";
 import { useParams } from "react-router-dom";
 
 export default function DisplayBabisitterPage() {
@@ -50,9 +50,9 @@ export default function DisplayBabisitterPage() {
             <strong>likes:</strong> {babysitter.likes}
           </p>
         </>
-        
-      ) :
-      <h1>No Users</h1>}
+      ) : (
+        <h1>No Users</h1>
+      )}
     </>
   );
 }

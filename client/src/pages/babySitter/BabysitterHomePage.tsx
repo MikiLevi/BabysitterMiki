@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../providers/AuthProvider";
+import { AuthContext } from "../../providers/AuthProvider";
 import { NavLink } from "react-router-dom";
-import useFetch from "../hooks/useFetch";
-import IBabysitter from "../interface/BabySitter";
+import useFetch from "../../hooks/useFetch";
+import IBabysitter from "../../interface/BabySitter";
 
 interface IOrder {
   status: string;

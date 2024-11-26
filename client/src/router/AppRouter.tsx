@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import HomePage from "../pages/HomePage";
-import { LoginPage } from "../pages/LoginPage";
 import { Register } from "../pages/register/Register";
-import AboutPage from "../pages/AboutPage";
-import ParentPage from "../pages/ParentPage";
-import { BaybisitterHomePage } from "../pages/BaybisitterHomePage";
+import ParentPage from "../pages/parent/ParentPage";
 import { EditBabysitter } from "../components/EditBabysitter";
-import DisplayBabisitterPage from "../pages/DisplayBabisitterPage";
-import ErrorPage from "../pages/ErrorPage";
+import ErrorPage from "../pages/error/ErrorPage";
+import AboutPage from "../pages/about/AboutPage";
+import { LoginPage } from "../pages/login/LoginPage";
+import HomePage from "../pages/home/HomePage";
+import DisplayBabisitterPage from "../pages/display/DisplayBabisitterPage";
+import BaybisitterHomePage from "../pages/babySitter/BabysitterHomePage";
 
 export default function AppRouter() {
   return (
