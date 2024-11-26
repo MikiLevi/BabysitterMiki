@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import logo from "../../assets/logo.png";
 import Cookies from "js-cookie";
-import TopNavLink from "../../componnets/TopNavLink";
+import TopNavLink from "../../components/TopNavLink";
+import "./Header.module.css"
 
 export default function Header() {
   const { user, logout } = useContext(AuthContext) ?? {};
