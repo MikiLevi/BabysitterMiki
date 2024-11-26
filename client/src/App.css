@@ -126,6 +126,7 @@ button.selected:hover {
   background-color: gold;
   border: none;
 }
+
 .nav {
   display: flex;
   justify-content: space-evenly;
