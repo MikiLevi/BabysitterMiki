@@ -11,6 +11,7 @@ interface UserDTO {
 }
 
 interface AuthContextType {
+  isAdmin: boolean;
   user: IParents | IBabysitter | null;
   error: string | null;
   login: (user: UserDTO, urlPath: string) => Promise<boolean>;

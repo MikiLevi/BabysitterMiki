@@ -1,0 +1,29 @@
+.page_header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f7fc;
+  border: 1px solid #e2d9f3;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 600px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.page_header__title {
+  font-size: 2rem;
+  margin: 0;
+  color: #5e3a8c;
+  font-weight: 600;
+}
+
+.page_header__subtitle {
+  font-size: 1rem;
+  margin: 5px 0 0;
+  color: #8c7aab;
+  font-weight: 400;
+}

@@ -4,6 +4,7 @@ import IBabysitter from "../../interface/BabySitter";
 import IOrder from "../../interface/orderType";
 import { AuthContext } from "../../providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import style from "./ParentPage.module.css"
 
 export default function ParentPage() {
   const { user } = useContext(AuthContext) ?? {};
@@ -48,14 +49,14 @@ export default function ParentPage() {
 
   return (
     <>
-      <div className="card-list">
+      <div className={style.card_list}>
         {babysitters && babysitters.length > 0 ? (
           babysitters.map((user) => (
-            <div key={user.email} className="user-card">
+            <div key={user.email} className={style.user_card}>
               <img
                 src={user.image || "default-avatar.jpg"}
                 alt={`${user.name}'s avatar`}
-                className="user-avatar"
+                className={style.user_avatar}
               />
 
               <h2>{user.name}</h2>

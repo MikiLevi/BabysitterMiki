@@ -3,6 +3,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { NavLink } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import IBabysitter from "../../interface/BabySitter";
+import style from "./BabysitterHomePage.module.css"
 
 interface IOrder {
   status: string;
@@ -49,21 +50,21 @@ export const BaybisitterHomePage = () => {
 
   return (
     <>
-      <div className="page-header">
-        <h1 className="page-header__title">Welcome, {userBabysitter?.name}</h1>
-        <p className="page-header__subtitle">
+      <div className={style.page_header}>
+        <h1 className={style.page_header__title}>Welcome, {userBabysitter?.name}</h1>
+        <p className={style.page_header__subtitle}>
           Manage your babysitting profile and orders
         </p>
       </div>
 
-      <div className="user-card">
+      <div className={style.user_card}>
         <img
           src={userBabysitter?.image || "/default-avatar.png"}
           alt={userBabysitter?.name}
-          className="user-avatar"
+          className={style.user_avatar}
         />
         <h2>{userBabysitter?.name}</h2>
-        <div className="user-info">
+        <div className={style.user_info}>
           <p>Age: {userBabysitter?.age}</p>
           <p>Address: {userBabysitter?.address}</p>
           <p>Phone: {userBabysitter?.phone}</p>
@@ -80,15 +81,15 @@ export const BaybisitterHomePage = () => {
         </NavLink>
       </div>
 
-      <div className="page-header">
-        <h2 className="page-header__title">Your Orders</h2>
-        <p className="page-header__subtitle">Manage your current orders</p>
+      <div className={style.page_header}>
+        <h2 className={style.page_header__title}>Your Orders</h2>
+        <p className={style.page_header__subtitle}>Manage your current orders</p>
       </div>
 
-      <div className="card-list">
+      <div className={style.card_list}>
         {orders.length > 0 ? (
           orderToBabysitter?.map((order) => (
-            <div className="user-card" key={order.parent_id}>
+            <div className={style.user_card} key={order.parent_id}>
               <h2>Order Details</h2>
               <p>Status: {order.status}</p>
               <p>Babysitter ID: {order.babysitter_id}</p>
@@ -103,9 +104,9 @@ export const BaybisitterHomePage = () => {
             </div>
           ))
         ) : (
-          <div className="page-header">
-            <h2 className="page-header__title">No Orders Available</h2>
-            <p className="page-header__subtitle">
+          <div className={style.page_header}>
+            <h2 className={style.page_header__title}>No Orders Available</h2>
+            <p className={style.page_header__subtitle}>
               You currently have no orders assigned
             </p>
           </div>

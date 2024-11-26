@@ -8,21 +8,26 @@ import HomePage from "../pages/home/HomePage";
 import DisplayBabisitterPage from "../pages/display/DisplayBabisitterPage";
 import BaybisitterHomePage from "../pages/babySitter/BabysitterHomePage";
 import { EditBabysitter } from "../components/edit/EditBabysitter";
+import PrivateRoute from "../guard/PrivateRoute";
+import IsAdmin from "../guard/IsAdmin";
 
 export default function AppRouter() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/babysitter/*" element={<BaybisitterHomePage />} />
+        <Route path="/babysitter/*" element={<PrivateRoute><BaybisitterHomePage /></PrivateRoute>} />
         <Route path="/Edit/:id" element={<EditBabysitter />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/parent" element={<ParentPage />} />
+        <Route path="/register" element={<IsAdmin><Register /></IsAdmin>} />
+        <Route path="/parent" element={<PrivateRoute><IsAdmin><ParentPage /></IsAdmin></PrivateRoute>} />
         <Route path="/display/:id" element={<DisplayBabisitterPage />} />
         <Route path="/*" element={<ErrorPage />} />
       </Routes>
     </div>
   );
+  
 }
+

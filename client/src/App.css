@@ -107,8 +107,6 @@ button.selected:hover {
 .contenerStarChecked {
   width: 30px;
   height: 30px;
-  /* background-color: black; */
-  /* color: black; */
   border: 15.6px solid rgb(6, 6, 6);
   clip-path: polygon(
     50% 0%,
@@ -122,12 +120,6 @@ button.selected:hover {
     2% 35%,
     39% 35%
   );
-  /* clip-path מגדיר את הצורה של כוכב */
-}
-.contenerStar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .contenerStarChecked {
@@ -138,35 +130,6 @@ button.selected:hover {
   display: flex;
   justify-content: space-evenly;
   width: 300px;
-}
-.page-header {
-  text-align: center;
-  padding: 20px;
-  background-color: #f9f7fc;
-  border: 1px solid #e2d9f3;
-  border-radius: 8px;
-  margin: 20px auto;
-  width: 600px;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.page-header__title {
-  font-size: 2rem;
-  margin: 0;
-  color: #5e3a8c;
-  font-weight: 600;
-}
-
-.page-header__subtitle {
-  font-size: 1rem;
-  margin: 5px 0 0;
-  color: #8c7aab;
-  font-weight: 400;
 }
 
 .nav a,
@@ -190,57 +153,20 @@ button.selected:hover {
   font-weight: bold;
 }
 
-.card-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.user-card {
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.user-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.user-avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-  border: 3px solid #dec2ff;
-}
-
-.user-card h2 {
+.user_card h2 {
   font-size: 1.5rem;
   color: #5e3a8c;
   margin-bottom: 10px;
 }
 
-.user-card p {
+.user_card p {
   font-size: 0.9rem;
   color: #555;
   margin: 5px 0;
   text-align: center;
 }
 
-.user-card button {
+.user_card button {
   margin-top: 15px;
   padding: 10px 20px;
   background-color: #ff9ae6;
@@ -252,62 +178,10 @@ button.selected:hover {
   transition: background-color 0.3s ease;
 }
 
-.user-card button:hover {
+.user_card button:hover {
   background-color: #e284d8;
 }
-.cta-section {
-  text-align: center;
-}
-.about-container {
-  padding: 20px;
-  text-align: center;
-  font-family: "Arial", sans-serif;
-  background-color: #f8f9fa;
-}
 
-.developers-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.developer-card {
-  width: 250px;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 15px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.developer-card:hover {
-  transform: translateY(-5px);
-  transition: 1s;
-  background-color: #dec2ff;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.developer-image {
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.developer-card h3 {
-  font-size: 1.2rem;
-  margin: 10px 0;
-  color: #495057;
-}
-
-.developer-card p {
-  font-size: 1rem;
-  color: #6c757d;
-  line-height: 1.5;
-}
 .main {
   max-width: 1200px;
   margin: 0 auto;
@@ -320,31 +194,6 @@ header h1 {
   font-size: 2.5rem;
   margin: 0;
   font-weight: bold;
-}
-
-.user-info {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.user-info h2 {
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 0.5rem;
-}
-
-.user-info p {
-  margin: 1rem 0;
-  color: #4b5563;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .edit-btn {
@@ -438,16 +287,16 @@ header h1 {
     font-size: 2rem;
   }
 
-  .user-info,
+  .user_info,
   .order-section {
     padding: 1.5rem;
   }
 
-  .order-card {
+  .order_card {
     padding: 1rem;
   }
 }
-.user-card {
+.user_card {
   background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -463,12 +312,12 @@ header h1 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.user-card:hover {
+.user_card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.user-avatar {
+.user_avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -477,13 +326,13 @@ header h1 {
   border: 3px solid #dec2ff;
 }
 
-.user-card h2 {
+.user_card h2 {
   font-size: 1.5rem;
   color: #5e3a8c;
   margin-bottom: 10px;
 }
 
-.user-card .user-info {
+.user_card .user-info {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -491,30 +340,13 @@ header h1 {
   margin: 20px 0;
 }
 
-.user-card .user-info p {
+.user_card .user-info p {
   font-size: 0.9rem;
   color: #555;
   padding: 10px;
   background-color: #f9f7fc;
   border-radius: 5px;
   margin: 0;
-}
-
-.user-card button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #dec2ff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-  width: auto;
-}
-
-.user-card button:hover {
-  background-color: #ff9ae6;
 }
 
 .status-btn {
@@ -547,22 +379,12 @@ header h1 {
   color: black;
 }
 
-.card-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-}
-
 @media (max-width: 768px) {
-  .user-card .user-info {
+  .user_card .user-info {
     grid-template-columns: 1fr;
   }
 
-  .card-list {
+  .card_list {
     grid-template-columns: 1fr;
   }
 

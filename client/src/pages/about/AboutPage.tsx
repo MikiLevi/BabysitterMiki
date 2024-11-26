@@ -2,6 +2,7 @@ import miki from "../../assets/miki.png";
 import meni from "../../assets/meni.png";
 import eliya from "../../assets/eliya.png";
 import PageHeader from "../../components/page/PageHeader";
+import style from "./AboutPage.module.css"
 
 const developers = [
   {
@@ -25,11 +26,11 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader title="Meet the Developers" subtitle="Pearl Team" />
-      <div className="about-container">
-        <div className="developers-list">
+      <div className={style.about_container}>
+        <div className={style.developers_list}>
           {developers.map((dev, index) => (
-            <div key={index} className="developer-card">
-              <img src={dev.image} alt={dev.name} className="developer-image" />
+            <div key={index} className={style.developer_card}>
+              <img src={dev.image} alt={dev.name} className={style.developer_image} />
               <h3>{dev.name}</h3>
               <p>{dev.story}</p>
             </div>

@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import { AuthContext } from "../../providers/AuthProvider";
+import style from "./CommentRegister.module.css";
 interface Props {
   id: string;
 }
@@ -70,7 +71,7 @@ export default function CommentRegister({ id }: Props) {
         onChange={(e) => setComment(e.target.value)}
         value={comment}
       />
-      <div className="contenerStar">
+      <div className={style.contenerStar}>
         <div onClick={() => handelStyle(1)} className={star1}></div>
         <div onClick={() => handelStyle(2)} className={star2}></div>
         <div onClick={() => handelStyle(3)} className={star3}></div>
