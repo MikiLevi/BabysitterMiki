@@ -23,7 +23,6 @@ export default function CommentRegister({ id }: Props) {
   }, [data]);
 
   const handelStyle = (num: number) => {
-    // עדכון כל הכוכבים עד הכוכב הנבחר
     const updatedStars = stars.map((_, index) =>
       index < num ? "contenerStarChecked" : "star"
     );
@@ -33,7 +32,7 @@ export default function CommentRegister({ id }: Props) {
   const handleSubmit = () => {
     const selectedStars = stars.filter(
       (star) => star === "contenerStarChecked"
-    ).length; // מספר הכוכבים שנבחרו
+    ).length;
     if (selectedStars > 0 && comment.trim() !== "") {
       console.log("Submitting comment:", {
         babysitterId: id,
@@ -41,7 +40,6 @@ export default function CommentRegister({ id }: Props) {
         stars: selectedStars,
         comment,
       });
-      // כאן ניתן להוסיף בקשת POST לשרת
     } else {
       alert("Please fill all fields correctly.");
     }
